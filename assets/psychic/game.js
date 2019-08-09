@@ -25,7 +25,7 @@ countGuessesLeft();
 var restart = function() {
 	guessesLeft = 9;
 	letterUser = [];
-	var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+	computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 }
 
 // When the user presses a key, it will run this
@@ -40,14 +40,12 @@ document.onkeyup = function(event) {
 
 	if (userGuess === computerGuess){
 		wins++;
-
-		restart();
-
 		document.querySelector("#wins").innerHTML = "Wins: " + wins;
+		restart();
 	} 
 	else if (guessesLeft === 0) {
 		losses++;
-		document.querySelector("#lose").innerHTML = "Loses: " + losses;
+		document.querySelector("#lose").innerHTML = "Losses: " + losses;
 		restart();
 	}
   };
