@@ -40,8 +40,10 @@ document.onkeyup = function(event) {
 
 	if (userGuess === computerGuess){
 		wins++;
-		document.querySelector("#wins").innerHTML = "Wins: " + wins;
+
 		restart();
+
+		document.querySelector("#wins").innerHTML = "Wins: " + wins;
 	} 
 	else if (guessesLeft === 0) {
 		losses++;
